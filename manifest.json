@@ -1,0 +1,36 @@
+{
+  "name": "Poznámky",
+  "description": "vlastní porzšíření pro poznámky",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "./icons/icon_16.svg",
+    "32": "./icons/icon_32.svg",
+    "64": "./icons/icon_64.svg",
+    "128": "./icons/icon_128.svg"
+  },
+  "background": {
+    "page": "background/index.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "./pop-up/index.html",
+    "default_icons": {
+      "16": "./icons/icon_16.svg",
+      "32": "./icons/icon_32.svg",
+      "64": "./icons/icon_64.svg",
+      "128": "./icons/icon_128.svg"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["file:///js"],
+      "js": ["./js/utils.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "./options/index.html",
+    "open_in_tab": true
+  },
+  "permissions": ["storage", "contextMenus", "tabs"]
+}

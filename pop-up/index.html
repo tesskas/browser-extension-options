@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Notes pop-up</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container my-3">
+      <h1 id="title">Custom note</h1>
+      <div>
+        <div class="form-group">
+          <a id="url" href="www.custom-url.com">www.custom-url.com</a>
+        </div>
+
+        <div class="form-group">
+          <select id="note-color" class="custom-select">
+            <option selected>green</option>
+            <option>red</option>
+            <option>yellow</option>
+            <option>turquoise</option>
+            <option>blue</option>
+            <option>gray</option>
+            <option>dark</option>
+            <option>light</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="note-text">Note</label>
+          <textarea class="form-control" id="note-text" rows="3"></textarea>
+        </div>
+        <button id="add-note" class="btn btn-success mb-2">Add note</button>
+      </div>
+    </div>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
